@@ -14,4 +14,9 @@ public class DepartmentService {
     public Department save(Department department){
         return departmentRepository.save(department);
     }
+
+    public Department getById(Long departmentId) {
+        //return departmentRepository.getById(departmentId);
+        return departmentRepository.findById(departmentId).orElse(null);
+    }
 }
